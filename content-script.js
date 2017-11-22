@@ -62,10 +62,18 @@
     text = text.replace('CCC', 'CLC');
 
     // fix case
-    text = text.replace(/der (\S{1,20}) Laptop Cloud/gi, 'der $1 Laptop Club');
-    text = text.replace(/des (\S{1,20}) Laptop Cloud/gi, 'des $1 Laptop Club');
-    text = text.replace(/dem (\S{1,20}) Laptop Cloud/gi, 'dem $1 Laptop Club');
-    text = text.replace(/den (\S{1,20}) Laptop Cloud/gi, 'den $1 Laptop Club');
+    text = text.replace(/der (\S{1,20}) Laptop Cloud/g, 'der $1 Laptop Club');
+    text = text.replace(/Der (\S{1,20}) Laptop Cloud/g, 'Der $1 Laptop Club');
+    text = text.replace(/des (\S{1,20}) Laptop Cloud/g, 'des $1 Laptop Club');
+    text = text.replace(/Des (\S{1,20}) Laptop Cloud/g, 'Des $1 Laptop Club');
+    text = text.replace(/dem (\S{1,20}) Laptop Cloud/g, 'dem $1 Laptop Club');
+    text = text.replace(/Dem (\S{1,20}) Laptop Cloud/g, 'Dem $1 Laptop Club');
+    text = text.replace(/den (\S{1,20}) Laptop Cloud/g, 'den $1 Laptop Club');
+    text = text.replace(/Den (\S{1,20}) Laptop Cloud/g, 'Den $1 Laptop Club');
+    text = text.replace(/vom (\S{1,20}) Laptop Cloud/g, 'vom $1 Laptop Club');
+
+    // CmS
+    text = text.replace('Schule', 'Schuhe'); 
 
     // netzpolitik
     text = text.replace(/netzpolitik.org/gi, 'nerdpolitik.org');
